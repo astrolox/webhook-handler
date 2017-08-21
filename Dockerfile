@@ -14,4 +14,5 @@ ENV CONFIG=config.json \
     HOST=0.0.0.0 \
     PORT=8080
 
+VOLUME ["/usr/src/app/instance/"]
 EXPOSE 8080

@@ -7,6 +7,8 @@ Lightweight but comprehensive application which receives and handles webhooks.
 
 You will require a configuration file similar to this example. In this example the webhook URL of `http://0.0.0.0/url-slug-for-hook?token=63fa31f8-47b6-4c21-bf23-122ead338eb9` is defined. When this URL is accessed via POST the defined behaviour is triggered.
 
+The configuration file needs to be placed in the `instance` directory. The default name for the file is `config.json`.
+
 **Ensure that the token is kept secret.**
 
 ```json
@@ -26,7 +28,7 @@ You will require a configuration file similar to this example. In this example t
 You have several options for running this web service.
 
 I recommend using docker. 
-e.g. `docker run astrolox/webhook-handler`
+e.g. `docker run --volume=/usr/src/app/instance/ astrolox/webhook-handler`
 
 If you have installed python 3 you can install the dependencies using pip.
 e.g. `pip install -r requirements.txt`
