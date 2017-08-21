@@ -1,0 +1,9 @@
+{
+  "WEBHOOKS": {
+    "url-slug-for-hook": {
+      "token": "63fa31f8-47b6-4c21-bf23-122ead338eb9",
+      "behaviour": "shell",
+      "cmd": "uptime"
+    }
+  }
+}
