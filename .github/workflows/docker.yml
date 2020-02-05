@@ -1,0 +1,15 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Push Docker Image to GitHub Packages
+      uses: elgohr/Publish-Docker-Github-Action@2.12
+      with:
+        name: ${{ github.repository }}/webhook-handler
+        username: ${{ github.actor }}
+        password: ${{ github.token }}
+        registry: docker.pkg.github.com
+        dockerfile: Dockerfile
